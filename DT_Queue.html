@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #c {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body id="jr">
+    <h1>Queue Data Structure</h1>
+    <p>
+        A queue is a useful data structure in programming. It is similar to the ticket queue outside a cinema hall,
+        where the first person entering the queue is the first person who gets the ticket. <br><br>
+
+        Queue follows the First In First Out (FIFO) rule - the item that goes in first is the item that comes out first.
+        <br><br><br>
+
+        <img src="https://simplesnippets.tech/wp-content/uploads/2019/04/queue-data-structure-diagram.jpg" width="415">
+        <br><br><br>
+
+        In the above image, since 1 was kept in the queue before 2, it is the first to be removed from the queue as
+        well. It follows the FIFO rule. <br><br>
+
+        In programming terms, putting items in the queue is called enqueue, and removing items from the queue is called
+        dequeue.<br><br>
+
+        We can implement the queue in any programming language like C, C++, Java, Python or C#, but the specification is
+        pretty much the same.<br>
+
+    </p>
+    <br><br>
+    <h3 id="c">Basic Operations of Queue</h3>
+    <p>
+        A queue is an object (an abstract data structure - ADT) that allows the following operations :
+    </p>
+    <p>
+    <ul>
+        <li><u style="color: darkolivegreen;"><strong>Enqueue</strong></u> : Add an element to the end of the queue.
+        </li><br>
+        <li><u style="color: darkolivegreen;"><strong>Dequeue</strong></u> : Remove an element from the front of the
+            queue.</li><br>
+        <li><u style="color: darkolivegreen;"><strong>IsEmpty</strong></u> : Check if the queue is empty.</li><br>
+        <li><u style="color: darkolivegreen;"><strong>IsFull</strong></u> : Check if the queue is full.</li><br>
+        <li><u style="color: darkolivegreen;"><strong>Peek</strong></u> : Get the value of the front of the queue
+            without removing it.</li><br>
+    </ul>
+    </p> <br>
+
+    <h3 id="c">Working of Queue</h3>
+    <p>
+        Queue operations work as follows :
+    </p>
+    <p>
+        <ul>
+            <li>check if the queue is full</li><br>
+            <li>for the first element, set the value of <strong>FRONT</strong> to <strong>0</strong></li><br>
+            <li>increase the <strong>REAR</strong> index by 1</li><br>
+            <li>add the new element in the position pointed to by <strong>REAR</strong></li><br>
+        </ul>
+    </p>
+<br>
+    <h3 id="c">Enqueue Operation</h3>
+
+    <p>
+        <ul>
+            <li>check if the queue is full</li><br>
+            <li>for the first element, set the value of <strong>FRONT</strong> to <strong>0</strong></li><br>
+            <li>increase the <strong>REAR</strong> index by <strong>1</strong></li><br>
+            <li>add the new element in the position pointed to by <strong>REAR</strong></li><br>
+        </ul>
+    </p>
+
+<br>
+    <h3 id="c">Dequeue Operation</h3>
+
+
+    <p>
+        <ul>
+            <li>check if the queue is empty</li><br>
+            <li>return the value pointed by <strong>FRONT</strong></li><br>
+            <li>increase the <strong>FRONT</strong> index by 1</li><br>
+            <li>for the last element, reset the values of <strong>FRONT</strong> and <strong>REAR</strong> to <strong>-1</strong></li><br>
+        </ul>
+    </p>
+
+    <img alt="Demonstrating how front and rear indexes are modified during enqueue and dequeue operations" height="1396"
+        src="//cdn.programiz.com/sites/tutorial2program/files/Queue-program-enqueue-dequeue.png"
+        title="Working of queue operations" width="415">
+
+
+
+
+</body>
+
+</html>

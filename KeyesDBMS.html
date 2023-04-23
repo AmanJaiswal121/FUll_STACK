@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #r {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #j {
+            text-align: justify;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        #c {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body id="jr">
+    <h1>DBMS Keys</h1>
+    <h3 style="color: blue;">What are Keys in DBMS?</h3>
+
+    <p>
+        KEYS in DBMS is an attribute or set of attributes which helps you to identify a row(tuple) in a relation(table).
+        They allow you to find the relation between two tables. Keys help you uniquely identify a row in a table by a
+        combination of one or more columns in that table. Key is also helpful for finding unique record or row from the
+        table. Database key is also helpful for finding unique record or row from the table. <br>
+    </p> <br>
+
+    <h3 id="c">Different Types Of Keys in DBMS -</h3>
+    <p>There are following 10 important keys in DBMS -</p>
+
+    <img decoding="async" class="aligncenter wp-image-8177" title="Keys in DBMS"
+        src="https://www.gatevidyalay.com/wp-content/uploads/2018/04/Keys-in-DBMS.png"
+        sizes="(max-width: 572px) 100vw, 572px"
+        srcset="https://www.gatevidyalay.com/wp-content/uploads/2018/04/Keys-in-DBMS.png 572w, https://www.gatevidyalay.com/wp-content/uploads/2018/04/Keys-in-DBMS-300x177.png 300w"
+        alt="" width="400" height="337">
+
+    <p>
+        01. Super key <br>
+        02. Candidate key<br>
+        03. Primary key<br>
+        04. Alternate key<br>
+        05. Foreign key<br>
+        06. Partial key<br>
+        07. Composite key<br>
+        08. Unique key<br>
+        09. Surrogate key<br>
+        10. Secondary key<br>
+    </p> <br>
+
+
+    <!-- Super key -->
+
+
+    <h3 style="color: darkblue;">01. <u>Super Key</u> - </h3>
+
+    <ul>
+        <li>A super key is a set of attributes that can identify each tuple uniquely in the given relation.</li> <br>
+        <li>A super key is not restricted to have any specific number of attributes.</li><br>
+        <li>Thus, a super key may consist of any number of attributes.</li><br>
+    </ul>
+    <u>eg.</u> - <br>
+    Consider the following Student schema - <br>
+    <ul>
+        <h5>Student ( roll , name , sex , age , address , class , section )</h5>
+    </ul><br>
+    <u>NOTES</u> - <br><br>
+    All the attributes in a super key are definitely sufficient to identify each tuple uniquely in the given relation
+    but all of them may not be necessary. <br><br>
+
+
+    <!-- Candidate Key -->
+
+
+    <h3 style="color: darkblue;">02. <u>Candidate Key</u> - </h3>
+
+    <ul>
+        A minimal super key is called as a candidate key. <br>
+    </ul>
+    <p style="text-align: center;">OR</p>
+    <ul>
+        A set of minimal attribute(s) that can identify each tuple uniquely in the given relation is called as a
+        candidate key. <br>
+    </ul>
+
+    <u>eg.</u> - <br>
+    Consider the following Student schema - <br>
+    <ul>
+        <h5>Student ( roll , name , sex , age , address , class , section )</h5>
+    </ul>
+    <br>
+    <u>NOTES</u> -
+    <ul>
+        <li>All the attributes in a candidate key are sufficient as well as necessary to identify each tuple uniquely.
+        </li><br>
+        <li>Removing any attribute from the candidate key fails in identifying each tuple uniquely.</li><br>
+        <li>The value of candidate key must always be unique.</li><br>
+        <li>The value of candidate key can never be NULL.</li><br>
+        <li>It is possible to have multiple candidate keys in a relation.</li><br>
+        <li>Those attributes which appears in some candidate key are called as prime attributes.</li><br>
+    </ul>
+
+
+    <!-- Primary key -->
+
+
+    <h3 style="color: darkblue;">03. <u>Primary Key</u> - </h3>
+
+    <ul>A primary key is a candidate key that the database designer selects while designing the database.</ul>
+    <p style="text-align: center;">OR</p>
+    <ul>Candidate key that the database designer implements is called as a primary key.</ul>
+    <br>
+    <u>NOTES</u> -
+    <ul>
+        <li>The value of primary key can never be NULL.</li><br>
+        <li>The value of primary key must always be unique.</li><br>
+        <li>The values of primary key can never be changed i.e. no updation is possible.</li><br>
+        <li>The value of primary key must be assigned when inserting a record.</li><br>
+        <li>A relation is allowed to have only one primary key.</li>
+    </ul> <br>
+
+    <h3 id="c">Remember</h3> <br>
+    <img decoding="async" loading="lazy" class="aligncenter wp-image-8178"
+        title="Super Key | Candidate Key | Primary Key"
+        src="https://www.gatevidyalay.com/wp-content/uploads/2018/04/Super-Key-Candidate-Key-Primary-Key.png"
+        sizes="(max-width: 572px) 100vw, 572px"
+        srcset="https://www.gatevidyalay.com/wp-content/uploads/2018/04/Super-Key-Candidate-Key-Primary-Key.png 572w, https://www.gatevidyalay.com/wp-content/uploads/2018/04/Super-Key-Candidate-Key-Primary-Key-300x143.png 300w"
+        alt="" width="400" height="272"> <br><br>
+
+
+    <!-- Alternate Key -->
+
+
+    <h3 style="color: darkblue;">04. <u>Alternate Key</u> - </h3>
+
+    <ul>Candidate keys that are left unimplemented or unused after implementing the primary key are called as alternate
+        keys.</ul>
+    <p style="text-align: center;">OR</p>
+    <ul>Unimplemented candidate keys are called as alternate keys.</ul>
+    <br>
+
+
+
+    <!-- Foreign Key -->
+
+    <h3 style="color: darkblue;">05. <u>Foreign Key</u> - </h3>
+    <ul>
+        <li>An attribute ‘X’ is called as a foreign key to some other attribute ‘Y’ when its values are dependent on the
+            values of attribute ‘Y’.</li><br>
+        <li>The attribute ‘X’ can assume only those values which are assumed by the attribute ‘Y’.</li><br>
+        <li>Here, the relation in which attribute ‘Y’ is present is called as the referenced relation.</li><br>
+        <li>The relation in which attribute ‘X’ is present is called as the referencing relation.</li><br>
+        <li>The attribute ‘Y’ might be present in the same table or in some other table.</li><br>
+    </ul>
+
+    <u>eg.</u> - <br><br>
+    Consider the following two schemas- <br>
+
+    <img decoding="async" loading="lazy" class="aligncenter wp-image-1828" title="Foreign Key"
+        src="https://www.gatevidyalay.com/wp-content/uploads/2018/04/Foreign-Key.png"
+        sizes="(max-width: 751px) 100vw, 751px"
+        srcset="https://www.gatevidyalay.com/wp-content/uploads/2018/04/Foreign-Key.png 751w, https://www.gatevidyalay.com/wp-content/uploads/2018/04/Foreign-Key-300x86.png 300w"
+        alt="" width="400" height="216"> <br>
+    <p>
+        Here, t_dept can take only those values which are present in dept_no in Department table since only those
+        departments actually exist. <br>
+    </p> <br>
+
+    <u>NOTES</u> - <br><br>
+    <ul>
+        <li>Foreign key references the primary key of the table.</li><br>
+        <li>Foreign key can take only those values which are present in the primary key of the referenced relation.</li>
+        <br>
+        <li>Foreign key may have a name other than that of a primary key.</li><br>
+        <li>Foreign key can take the NULL value.</li><br>
+        <li>There is no restriction on a foreign key to be unique.</li><br>
+    </ul>
+    <br>
+
+    <!--  Partial Key -->
+
+    <h3 style="color: darkblue;">06. <u>Partial Key</u> - </h3>
+    <ul>
+        <li>Partial key is a key using which all the records of the table can not be identified uniquely.</li><br>
+        <li>However, a bunch of related tuples can be selected from the table using the partial key.</li><br>
+    </ul>
+
+    <u>eg.</u> - <br>
+    <p>Consider the following schema -</p>
+    <ul>
+        <h5>Department ( Emp_no , Dependent_name , Relation )</h5>
+    </ul>
+
+    <br>
+    <table>
+        <tr>
+            <th style="color: blue;">Emp_no</th>
+            <th style="color: blue;">Dependent_name</th>
+            <th style="color: blue;">Relation</th>
+        </tr>
+
+        <tr>
+            <td>E1</td>
+            <td>Suman</td>
+            <td>Mother</td>
+        </tr>
+
+        <tr>
+            <td>E1</td>
+            <td>Ajay</td>
+            <td>Father</td>
+        </tr>
+
+        <tr>
+            <td>E2</td>
+            <td>Vijay</td>
+            <td>Father</td>
+        </tr>
+
+        <tr>
+            <td>E3</td>
+            <td>Ankush</td>
+            <td>Son</td>
+        </tr>
+    </table> <br>
+    <p>Here, using partial key Emp_no, we can not identify a tuple uniquely but we can select a bunch of tuples from the
+        table.</p>
+    <br>
+
+
+    <!-- Composite Key -->
+
+
+    <h3 style="color: darkblue;">07. <u>Composite Key</u> - </h3>
+    <p>A primary key comprising of multiple attributes and not just a single attribute is called as a composite key.</p>
+    <br>
+
+
+    <!-- Unique Key -->
+
+    <h3 style="color: darkblue;">08. <u>Unique Key</u> - </h3>
+    <p>The best example of unique key is Adhaar Card Numbers.</p>
+    <ul>
+        <li>The Adhaar Card Number is unique for all the citizens (tuples) of India (table).</li><br>
+        <li>If it gets lost and another duplicate copy is issued, then the duplicate copy always has the same number as
+            before.</li><br>
+        <li>Thus, it is non-updatable.</li><br>
+        <li>Few citizens may not have got their Adhaar cards, so for them its value is NULL.</li><br>
+    </ul>
+
+
+    <!--  Surrogate Key -->
+
+    <h3 style="color: darkblue;">09. <u>Surrogate Key</u> - </h3>
+    <p>
+        Surrogate key is a key with the following properties -
+    </p> 
+    <ul>
+        <li>It is unique for all the records of the table.</li><br>
+        <li>It is updatable.</li><br>
+        <li>It can not be NULL i.e. it must have some value.</li><br>
+    </ul> 
+    <u>eg.</u> - <br><br>
+    Mobile Number of students in a class where every student owns a mobile phone. <br><br>
+
+
+    <!-- Secondary Key -->
+
+
+    <h3 style="color: darkblue;">10. <u>Secondary Key</u> - </h3>
+    <p>Secondary key is required for the indexing purpose for better and faster searching.</p>
+
+
+
+</body>
+
+</html>

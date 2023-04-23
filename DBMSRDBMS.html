@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #r {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #j {
+            text-align: justify;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        #c {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body id="jr">
+    <h1>RDBMS Concepts</h1>
+
+    <h3 id="c">RDBMS - </h3>
+    <p>
+        stands for relational database management system. A relational model can be represented as a table of rows and
+        columns. A relational database has following major components: <br>
+        1. Table<br>
+        2. Record or Tuple<br>
+        3. Field or Column name or Attribute<br>
+        4. Domain<br>
+        5. Instance<br>
+        6. Schema<br>
+        7. Keys<br><br>
+    </p>
+
+    <h3 id="c">1. Table</h3>
+    <p>
+        A table is a collection of data represented in rows and columns. Each table has a name in database. For example,
+        the following table “STUDENT” stores the information of students in database. <br>
+        <strong>Table : Student</strong>
+    </p>
+    <table>
+        <tr>
+            <th>Student_Id</th>
+            <th>Student_Name</th>
+            <th>Student_Addr</th>
+            <th>Student_Age</th>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Chaitanya</td>
+            <td>Dayal Bagh, Agra</td>
+            <td>27</td>
+        </tr>
+
+        <tr>
+            <td>102</td>
+            <td>Ajeet</td>
+            <td>Delhi</td>
+            <td>26</td>
+        </tr>
+
+        <tr>
+            <td>103</td>
+            <td>Rahul</td>
+            <td>Gurgaon</td>
+            <td>24</td>
+        </tr>
+
+        <tr>
+            <td>104</td>
+            <td>Shubham</td>
+            <td>Chennai</td>
+            <td>25</td>
+        </tr>
+    </table><br>
+
+    <h3 id="c">2. Record or Tuple</h3>
+    <p>Each row of a table is known as record. It is also known as tuple. For example, the following row is a record
+        that we have taken from the above table. <br></p>
+
+    <table>
+        <tr>
+            <td>102</td>
+            <td>Ajeet</td>
+            <td>Delhi</td>
+            <td>26</td>
+        </tr>
+    </table><br>
+
+    <h3 id="c">3. Field or Column name or Attribute</h3>
+    <p>
+        The above table “STUDENT” has four fields (or attributes): Student_Id, Student_Name, Student_Addr & Student_Age.
+        <br>
+    </p><br>
+
+    <h3 id="c">4. Domain</h3>
+    <p> 
+        A domain is a set of permitted values for an attribute in table. For example, a domain of month-of-year can
+        accept January, February,…December as values, a domain of dates can accept all possible valid dates etc. We
+        specify domain of attribute while creating a table. <br> <br>
+
+        An attribute cannot accept values that are outside of their domains. For example, In the above table “STUDENT”,
+        the Student_Id field has integer domain so that field cannot accept values that are not integers for example,
+        Student_Id cannot has values like, “First”, 10.11 etc.
+    </p> <br>
+
+    <h3 id="c">5. Keys</h3>
+    <p>
+        This is our next topic, I have covered the keys in detail in separate tutorials.
+    </p>
+
+
+</body>
+
+</html>

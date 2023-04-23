@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #r {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #j {
+            text-align: justify;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        #c {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body id="jr">
+    <h1>Normalization in dbms</h1>
+    <p>Normalization is a database design technique that reduces data redundancy and eliminates undesirable
+        characteristics like Insertion, Update and Deletion Anomalies. Normalization rules divides larger tables into
+        smaller tables and links them using relationships. The purpose of Normalisation in SQL is to eliminate redundant
+        (repetitive) data and ensure data is stored logically. <br><br>
+
+        The inventor of the relational model Edgar Codd proposed the theory of normalization of data with the
+        introduction of the First Normal Form, and he continued to extend theory with Second and Third Normal Form.
+        Later he joined Raymond F. Boyce to develop the theory of Boyce-Codd Normal Form. <br>
+    </p> <br>
+
+    <h3 id="c">Normalization Rule -</h3>
+    <p>Normalization rules are divided into the following normal forms :</p>
+    <ul>
+        01. First Normal Form <br>
+        02. Second Normal Form<br>
+        03. Third Normal Form<br>
+        04. BCNF<br>
+        05. Fourth Normal Form<br>
+    </ul> <br>
+
+    <h3 id="c"><u>First Normal Form (1NF)</u></h3>
+    <p>For a table to be in the First Normal Form, it should follow the following 4 rules :</p>
+
+    <ul>
+        <li>It should only have single(atomic) valued attributes/columns.</li><br>
+        <li>Values stored in a column should be of the same domain.</li><br>
+        <li>All the columns in a table should have unique names.</li><br>
+        <li>And the order in which data is stored, does not matter.</li><br>
+    </ul>
+
+    <p><strong style="color: darkolivegreen;">Single Valued Attributes</strong> - </p>
+    <p>Each column of your table should be
+        single valued which means they should not contain multiple values. We will explain this with help of an example
+        later, let's see the other rules for now.</p> <br>
+
+    <h3 id="c"><u>Second Normal Form (2NF)</u></h3>
+    <p>For a table to be in the Second Normal Form,</p>
+    <ul>
+        <li>It should be in the First Normal form.</li><br>
+        <li>And, it should not have Partial Dependency.</li><br>
+    </ul>
+    <p><strong style="color: darkolivegreen;">Partial Dependency</strong> - </p>
+    <p>
+        Now that we know what dependency is, we are in a better state to understand what partial dependency is. <br><br>
+
+        For a simple table like Student, a single column like student_id can uniquely identfy all the records in a
+        table. <br><br>
+
+        But this is not true all the time. So now let's extend our example to see if more than 1 column together can act
+        as a primary key. <br><br>
+
+        Let's create another table for Subject, which will have subject_id and subject_name fields and subject_id will
+        be the primary key.
+    </p>
+
+    <table>
+        <tr>
+            <th style="color: blue;">subject_id</th>
+            <th style="color: blue;">subject_name</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Java</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>C++</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Php</td>
+        </tr>
+    </table> <br>
+    <p>
+        Now we have a <strong>Student</strong> table with student information and another table <strong>Subject</strong>
+        for storing subject information. <br>
+    </p> <br>
+
+
+    <h3 id="c"><u>Third Normal Form (3NF)</u></h3>
+    <p>
+        A table is said to be in the Third Normal Form when,
+    <ul>
+        <li>It is in the Second Normal form.</li><br>
+        <li>And, it doesn't have Transitive Dependency.</li><br>
+    </ul>
+    </p>
+
+    <p style="color: darkolivegreen;"><strong>Transitive Dependency</strong> - </p>
+    <p>
+        With exam_name and total_marks added to our Score table, it saves more data now. Primary key for our Score table
+        is a composite key, which means it's made up of two attributes or columns → <strong>student_id +
+            subject_id</strong>. <br><br>
+
+        Our new column exam_name depends on both student and subject. For example, a mechanical engineering student will
+        have Workshop exam but a computer science student won't. And for some subjects you have Prctical exams and for
+        some you don't. So we can say that exam_name is dependent on both student_id and subject_id.<br><br>
+
+        And what about our second new column total_marks? Does it depend on our Score table's primary key?<br><br>
+
+        Well, the column total_marks depends on exam_name as with exam type the total score changes. For example,
+        practicals are of less marks while theory exams are of more marks.<br><br>
+
+        But, exam_name is just another column in the score table. It is not a primary key or even a part of the primary
+        key, and total_marks depends on it.<br><br>
+
+        This is <strong>Transitive Dependency</strong>. When a non-prime attribute depends on other non-prime attributes
+        rather than
+        depending upon the prime attributes or primary key.<br><br>
+    </p>
+
+    <h3 id="c"><u>Boyce and Codd Normal Form (BCNF)</u></h3>
+    <p>
+        <strong>Boyce and Codd Normal Form</strong> is a higher version of the Third Normal form. This form deals with
+        certain type of
+        anomaly that is not handled by 3NF. A 3NF table which does not have multiple overlapping candidate keys is said
+        to be in BCNF. For a table to be in BCNF, following conditions must be satisfied:
+    </p>
+    <ul>
+        <li>R must be in 3rd Normal Form.</li><br>
+        <li>and, for each functional dependency ( X → Y ), X should be a super Key.
+        </li><br>
+    </ul> <br>
+
+
+    <h3 id="c">Fourth Normal Form (4NF)</h3>
+
+    <p>
+        A table is said to be in the Fourth Normal Form when, <br>
+    <ul>
+        <li>It is in the Boyce-Codd Normal Form.</li><br>
+        <li>And, it doesn't have Multi-Valued Dependency.</li><br>
+    </ul>
+    </p>
+
+    <p style="color: darkolivegreen;">Multi-valued Dependency - </p>
+
+    <p>
+        Fourth Normal Form comes into picture when Multi-valued Dependency occur in any relation. In this tutorial we
+        will learn about Multi-valued Dependency, how to remove it and how to make any table satisfy the fourth normal
+        form. <br><br>
+        A table is said to have multi-valued dependency, if the following conditions are true, <br><br>
+
+        01. For a dependency A → B, if for a single value of A, multiple value of B exists, then the table may have
+        multi-valued dependency. <br><br>
+        02. Also, a table should have at-least 3 columns for it to have a multi-valued dependency. <br><br>
+        03. And, for a relation R(A,B,C), if there is a multi-valued dependency between, A and B, then B and C should be
+        independent of each other. <br><br>
+        If all these conditions are true for any relation(table), it is said to have multi-valued dependency. <br>
+
+    </p>
+
+</body>
+
+</html>

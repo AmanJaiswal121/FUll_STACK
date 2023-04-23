@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #c {
+            color: brown;
+        }
+
+        /* table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 160px;
+            width: 400px;
+        } */
+    </style>
+</head>
+
+<body id="jr">
+    <h1>Stack VS Queue</h1><br>
+
+    <h3 id="c">What is a Stack Data Structure</h3>
+    <p>
+        A stack is a non-primitive, linear data structure that stores the elements in a LIFO (Last In First Out) order.
+        However, the stack can only be used to store similar kinds of elements, that is, those that have the same data
+        types.
+    </p><br>
+
+    <h3 id="c">What Is a Queue Data Structure</h3>
+    <p>
+        A queue is also a non-primitive, linear data structure that stores elements in a sequential manner. However, the
+        queue data structure follows a FIFO (First In First Out) order to store and retrieve elements from the memory.
+        It can also only store similar kinds of elements in the queue.
+    </p> <br>
+
+    <h2>Difference between Stack and Queue Data Structures</h2>
+
+    <table>
+        <tr style="background-color: cadetblue;border: 1px solid black;
+        border-collapse: collapse;
+        height: 70px;
+        width: 400px; text-align: center;">
+            <th>Stack</th>
+            <th>Queue</th>
+        </tr>
+
+        <tr style="background-color: gainsboro;border: 1px solid black;
+        border-collapse: collapse;
+        height: 140px;
+        width: 400px; text-align: center;">
+            <td>1. It follows the LIFO (Last In First Out) order to store the elements, which means the element that is
+                inserted last will come out first.</td>
+            <td>1. It follows the FIFO (First In First Out) order to store the elements, which means the element that is
+                inserted first will come out first.</td>
+        </tr>
+
+        <tr style="background-color: gainsboro;border: 1px solid black;
+        border-collapse: collapse;
+        height: 140px;
+        width: 400px; text-align: center;">
+            <td>2. It has only one end, known as the top, at which both insertion and deletion take place.</td>
+            <td>2. It has two ends, known as the rear and front, which are used for insertion and deletion. The rear end
+                is used to insert the elements, whereas the front end is used to delete the elements from the queue.
+            </td>
+        </tr>
+
+        <tr style="background-color: gainsboro;border: 1px solid black;
+        border-collapse: collapse;
+        height: 140px;
+        width: 400px; text-align: center;">
+            <td>3. The insertion operation is known as push and the deletion operation is known as pop.</td>
+            <td>3. The insertion operation is known as enqueue and the deletion operation is known as dequeue.</td>
+        </tr>
+
+        <tr style="background-color: gainsboro;border: 1px solid black;
+        border-collapse: collapse;
+        height: 140px;
+        width: 400px; text-align: center;">
+            <td>4. The condition for checking whether the stack is empty is top ==-1 as -1 refers to no element in the
+                stack.</td>
+            <td>4. The condition for checking whether the queue is empty is front == -1</td>
+        </tr>
+
+        <tr style="background-color: gainsboro;border: 1px solid black;
+        border-collapse: collapse;
+        height: 140px;
+        width: 400px; text-align: center;">
+            <td>5. The condition for checking if the stack is full is top==max-1 as max refers to the maximum number of
+                elements that can be in the stack.</td>
+            <td>5. The condition for checking if the queue is full is rear==max-1 as max refers to the maximum number of
+                elements that can be in the queue.</td>
+        </tr>
+
+        <tr style="background-color: gainsboro;border: 1px solid black;
+        border-collapse: collapse;
+        height: 140px;
+        width: 400px; text-align: center;">
+            <td>6. There are no other variants or types of the stack.</td>
+            <td>6. There are three types of queues known as circular, double-ended, and priority.</td>
+        </tr>
+
+        <tr style="background-color: gainsboro;border: 1px solid black;
+        border-collapse: collapse;
+        height: 140px;
+        width: 400px; text-align: center;">
+            <td>7. It has a simple implementation compared to queues as no two pointers are involved.</td>
+            <td>7. It has a complex implementation compared to stacks as two pointers front and rear are involved.</td>
+        </tr>
+
+        <tr style="background-color: gainsboro;border: 1px solid black;
+        border-collapse: collapse;
+        height: 140px;
+        width: 400px; text-align: center;">
+            <td>8. It is used to solve recursion-based problems.</td>
+            <td>8. It is used to solve sequential processing-based problems.</td>
+        </tr>
+
+        <tr style="background-color: gainsboro;border: 1px solid black;
+        border-collapse: collapse;
+        height: 140px;
+        width: 400px; text-align: center;">
+            <td>9. A real-life example of a stack can be the Undo/Redo operation in Word or Excel.</td>
+            <td>9. A real-life example of a queue can be an operating system process scheduling queues.</td>
+        </tr>
+
+
+    </table>
+
+</body>
+
+</html>

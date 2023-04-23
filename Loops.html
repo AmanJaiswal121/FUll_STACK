@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #j {
+            text-align: justify;
+        }
+
+        #ja {
+            width: 300;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: antiquewhite;
+        }
+
+        #o {
+            width: 300;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 20px;
+            background-color: black;
+        }
+
+        #wi {
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><u>Loops in java</u></h1>
+    <p id="j">
+        The Java for loop is used to iterate a part of the program several times. If the number of iteration is fixed,
+        it is recommended to use for loop. <br>
+    <ul>
+        <li>
+            Sometime we want our to execute a few set of instructions over and over again. <br>
+            eg. - print value 1 to 100, print multiplication table etc. <br>
+        </li>
+    </ul>
+    <ul>
+        <li>Loops make it easy for us to tell the computer that a given set of instructions need to be execute
+            repeatedly.</li>
+    </ul>
+    </p><br>
+
+    <h3>Types of looping statements in Java :</h3>
+    <p>
+    <ul>
+        1. for loop <br>
+        2. while loop <br>
+        3. do-while loop <br>
+    </ul>
+    </p><br>
+
+    <!-- FOR LOOP -->
+
+    <h3><u>For loop in java</u> : </h3>
+    <p id="j">
+        The Java for loop repeats the execution of a set of Java statements. A for loop executes a block of code as long
+        as some condition is true. <br> <br>
+        For loop is used to run a block of code for a certain number of time. <br> <br>
+        <u>Syntax</u> : <br>
+    </p>
+    <p style="color: blue;">
+        for(initialization; condition; increment/decrement) <br>
+        { <br>
+        Statement(s); <br>
+        } <br>
+    </p>
+
+    <p id="j">
+        The <strong>initialization</strong> expression initializes the loop and is executed only once at the beginning
+        when the loop
+        begins. The <strong>termination condition</strong> is evaluated in every loop and if it evaluates to false, the
+        loop is
+        terminated. And lastly, <strong>increment/decrement</strong> expression is executed after each iteration through
+        the loop.
+    </p>
+
+    <img decoding="async" class="alignnone wp-image-9882" title="For loop Looping Statements Flow Chart in Java"
+        src="https://dotnettutorials.net/wp-content/uploads/2020/08/For-loop-Looping-Statement-Flow-Chart-in-Java.png"
+        alt="For loop Looping Statements Flow Chart in Java" width="400" height="214"
+        srcset="https://dotnettutorials.net/wp-content/uploads/2020/08/For-loop-Looping-Statement-Flow-Chart-in-Java.png 740w, https://dotnettutorials.net/wp-content/uploads/2020/08/For-loop-Looping-Statement-Flow-Chart-in-Java-300x127.png 300w"
+        sizes="(max-width: 504px) 100vw, 504px">
+
+    <p id="ja">
+        class ForLoopDemo <br>
+        {<br>
+        public static void main(String args[])<br>
+        {<br>
+        for(int num = 1; num <span>&lt;</span>= 5; num++)<br>
+        {<br>
+        System.out.println(num);<br>
+        }<br>
+        }<br>
+        }<br>
+    </p>
+
+    <p id="o">
+        <span id="wi">Output - </span> <br>
+        <span id="wi">&nbsp; 1</span> <br>
+        <span id="wi">&nbsp; 2</span> <br>
+        <span id="wi">&nbsp; 3</span> <br>
+        <span id="wi">&nbsp; 4</span> <br>
+        <span id="wi">&nbsp; 5</span> <br>
+    </p> <br>
+    <p><strong><u>Infinite for loop</u> - </strong></p>
+    <p id="ja">
+        for( ; ; ) <br>{ <br>
+        System.out.println("1");<br>
+        } <br>
+    </p>
+
+    <p id="o">
+        <span id="wi">Output - infinite loop</span> <br>
+    </p> <br>
+
+    <h3><u>Nested for loop</u> - </h3>
+    <p>A for loop whic contain inside another for loop calles as <strong>nested for loop</strong>.</p>
+
+    <u>Syntax</u> -
+    <p>
+        for(initialization; condition; increment/decrement) <br>
+        { <br>
+        for(initialization; condition; increment/decrement) <br>
+        { <br>
+        Statement/code <br>
+        } <br>
+        } <br>
+    </p> <br>
+
+
+    <!-- WHILE LOOP -->
+
+    <h3><u>While loop in java</u> : </h3>
+    <p id="j">
+        The while statement or loop continually executes a block of statements while a particular condition is true. The
+        while statement continues testing the expression and executing its block until the expression evaluates to
+        false. The syntax to use while loop in java is given below. <br>
+    <ul>
+        <li id="j">
+            A while loop statement in java repeatedly executes a target statement as long as a given condition true.
+        </li>
+    </ul>
+    </p>
+    <u>Syntax</u> : <br>
+    <p style="color: blue;">
+        while(condition) <br>
+        { <br>
+        Statement(s); <br>
+        } <br>
+    </p>
+
+    <img decoding="async" loading="lazy" class="alignnone wp-image-9884"
+        title="While Loop Looping Statements Flow Chart in Java"
+        src="https://dotnettutorials.net/wp-content/uploads/2020/08/While-Loop-Looping-Statement-Flow-Chart-in-Java.png"
+        alt="While Loop Looping Statements Flow Chart in Java" width="400" height="300"
+        srcset="https://dotnettutorials.net/wp-content/uploads/2020/08/While-Loop-Looping-Statement-Flow-Chart-in-Java.png 460w, https://dotnettutorials.net/wp-content/uploads/2020/08/While-Loop-Looping-Statement-Flow-Chart-in-Java-204x300.png 204w"
+        sizes="(max-width: 327px) 100vw, 327px">
+
+    <p id="ja">
+        class whileLoopDemo <br>
+        { <br>
+        public static void main(String args[]) <br>
+        { <br>
+        int x = 1; <br>
+        <span style="color: brown;">// Exit when x becomes greater than 4</span> <br>
+
+        while (x &lt;= 4) <br>
+        { <br>
+        System.out.println("Value of x:" + x);<br>
+        <span style="color: brown;">// Increment the value of x for</span> <br>
+        <span style="color: brown;">// next iteration</span> <br>
+        x++; <br>
+        }<br>
+        } <br>
+        } <br>
+    </p>
+    <p id="o">
+        <span id="wi">Output - </span> <br>
+        <span id="wi">&nbsp;value of x: 1</span> <br>
+        <span id="wi">&nbsp;value of x: 2</span> <br>
+        <span id="wi">&nbsp;value of x: 3</span> <br>
+        <span id="wi">&nbsp;value of x: 4</span> <br>
+    </p> <br>
+
+    <p><strong><u>Infinite while loop</u> - </strong></p>
+    <p id="ja">
+        int i = 1; <br>
+        while(i &lt;= 5) <br>
+        { <br>
+        System.out.println("1");<br>
+        } <br>
+    </p>
+
+    <p id="o">
+        <span id="wi">Output - infinite loop</span> <br>
+    </p> <br>
+
+    <!-- DO-WHILE LOOP -->
+
+    <h3><u>Do-while loop in java</u> : </h3>
+    <p id="j">
+        In do-while loop check the condition at the end of loop body. The java do-while loop is execute atleast once
+        because condition is checked after loop body. <br> <br>
+        <u>NOTE</u> : the do-while statement ends with a semicolon. The condition expression must be a boolean
+        expression. The syntax to use the do-while loop is given below. <br><br>
+        <u>Syntax</u> : <br>
+    <p style="color: blue;">
+        do{ <br>
+        Statement(s); <br>
+        } <br>
+        while(condition); <br>
+    </p>
+
+    </p>
+
+    <img src="https://dotnettutorials.net/wp-content/uploads/2020/08/Do-While-Loop-Looping-Statements-Flow-Chart-in-Java.png"
+        decoding="async" loading="lazy" class="alignnone wp-image-9885"
+        title="Do While Loop Looping Statements Flow Chart in Java"
+        alt="Do While Loop Looping Statements Flow Chart in Java" width="400" height="320"
+        srcset="https://dotnettutorials.net/wp-content/uploads/2020/08/Do-While-Loop-Looping-Statements-Flow-Chart-in-Java.png 398w, https://dotnettutorials.net/wp-content/uploads/2020/08/Do-While-Loop-Looping-Statements-Flow-Chart-in-Java-178x300.png 178w"
+        sizes="(max-width: 285px) 100vw, 285px">
+
+    <p id="ja">
+        class dowhileloopDemo <br>
+        {<br>
+        public static void main(String args[])<br>
+        {<br>
+        int x = 21;<br>
+        do<br>
+        {<br>
+        <span style="color: brown;">// The line will be printed even </span><br>
+        <span style="color: brown;">// if the condition is false </span><br>
+        System.out.println("Value of x:" + x);<br>
+        x++;<br>
+        }<br>
+        while (x &lt; 20);<br>
+        }<br>
+        }<br>
+    </p>
+
+    <p id="o">
+        <span id="wi">Output - Value of x: 21</span> <br>
+    </p> <br>
+
+    <p><u>Difference between while loop & do-while loop : </u> </p>
+    <p id="j">
+        The difference between do-while and while is that do-while evaluates its expression at the bottom of the loop
+        instead of the top. Therefore, the statements within the do block are always executed at least once.
+    </p>
+
+
+    <!-- FOR EACH LOOP -->
+
+    <h3><u>For-each Loop in java</u></h3>
+    <p id="j">
+        In Java, the for-each loop is used to iterate through elements of arrays and collections (like ArrayList). It is
+        also known as the enhanced for loop.
+    </p>
+    <u>Sytnax</u> -
+    <p style="color: blue;">
+        for(dataType item : array) { <br>
+        statement/code <br>
+        } <br>
+    </p>
+    <ul>
+        <li>
+            <strong>array</strong> - an array or a collection
+        </li>
+        <li>
+            <strong>item</strong> - each item of array/collection is assigned to this variable
+        </li>
+        <li>
+            <strong>dataType</strong> - the data type of the array/collection
+
+        </li>
+    </ul>
+
+    <p id="ja">
+        <span style="color: brown;">// print array elements</span> <br>
+
+        class Main { <br>
+        public static void main(String[] args) { <br>
+        <span style="color: brown;">// create an array</span> <br>
+        int[] numbers = {3, 9, 5, -5}; <br>
+        <span style="color: brown;">// for each loop</span> <br>
+
+        for (int number: numbers) { <br>
+        System.out.println(number); <br>
+        } <br>
+        } <br>
+        } <br>
+    </p>
+
+    <p id="o">
+        <span id="wi">Output - </span> <br>
+        <span id="wi">&nbsp; 3 </span> <br>
+        <span id="wi">&nbsp; 9 </span> <br>
+        <span id="wi">&nbsp; 5 </span> <br>
+        <span id="wi">&nbsp; -5 </span> <br>
+    </p>
+
+
+
+</body>
+
+</html>

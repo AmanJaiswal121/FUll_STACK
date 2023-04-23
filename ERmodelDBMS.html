@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #r {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #j {
+            text-align: justify;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        #c {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body id="jr">
+    <h1>ER Model in DBMS</h1>
+    <h2>Introduction</h2>
+    <p>
+        ER Model stands for Entity-Relationship Model, also known as a high-level data model that shows the relationship
+        among the entity sets.ER Model is used to define the entities and the relationships between them.
+    </p>
+
+    <h3 id="c">What is an ER Diagram?</h3>
+    <p>
+        ER diagrams are used to sketch out the design of a database. By defining the entities, their attributes, and
+        showing the relationships between them, an ER diagram illustrates the logical structure of databases.ER diagrams
+        are created based on three basic concepts: entities, attributes, and relationships. <br><br>
+        ER diagram has three main components: <br>
+    <ul>
+        <li>Entity</li>
+        <li>Attribute</li>
+        <li>Relationship</li>
+    </ul>
+    <img src="https://static.javatpoint.com/dbms/images/dbms-er-model-concept.png" alt="DBMS ER model concept">
+    </p> <br>
+    <h3 id="c">Entity</h3>
+    <p>
+        Any object that physically exists and is logically constructed in the real world is called as an entity. It is a
+        real-world object that can be easily identifiable. An entity is represented as a rectangle in an ER diagram.
+        <br><br>
+        Consider an organization as an example- manager, product, employee, department etc. can be taken as an entity.
+        <br>
+        <img src="https://static.javatpoint.com/dbms/images/dbms-er-model-concept2.png" alt="DBMS ER model concept"
+            width="400"> <br><br>
+        <strong><u>Weak Entity</u> - </strong>An entity that depends on another entity called a weak entity. The weak
+        entity doesn't contain any key attribute of its own. The weak entity is represented by a double rectangle. <br>
+        <br>
+        <img src="https://static.javatpoint.com/dbms/images/dbms-er-model-concept3.png" alt="DBMS ER model concept">
+
+    </p> <br>
+
+    <h3 id="c">Attribute</h3>
+    <p>
+        The attribute is used to describe the property of an entity. Eclipse is used to represent an attribute. <br>
+        <br>
+
+        <strong>For example</strong>, id, age, contact number, name, etc. can be attributes of a student. <br> <br>
+        <img src="https://static.javatpoint.com/dbms/images/dbms-er-model-concept4.png" alt="DBMS ER model concept">
+    </p> <br>
+
+    <h3 id="c">Relationship</h3>
+    <p>
+        A relationship is used to describe the relation between entities. Diamond or rhombus is used to represent the
+        relationship. <br><br>
+        <img src="https://static.javatpoint.com/dbms/images/dbms-er-model-concept9.png" alt="DBMS ER model concept"
+            width="400"> <br>
+        <br> Types of relationship - <br> <br>
+        01. <strong><u>One-to-one</u></strong><br>
+        One entity from entity set A can be associated with at most one entity of entity set B and vice versa. <br><br>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220131223352/121.jpg">
+        <br> <br>
+
+        02. <strong><u>One-to-many</u></strong> <br>
+        One entity from entity set A can be associated with more than one entities of entity set B however an entity
+        from entity set B, can be associated with at most one entity. <br> <br>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220131231234/12n.jpg"> <br><br>
+
+        03. <strong><u>Many-to-one</u></strong> <br>
+        More than one entities from entity set A can be associated with at most one entity of entity set B, however an
+        entity from entity set B can be associated with more than one entity from entity set A. <br><br>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220131232355/m21.jpg">
+        <br><br>
+         
+        04. <strong><u>Many-to-many</u></strong> <br>
+        One entity from A can be associated with more than one entity from B and vice versa. <br> <br>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220131232355/m21.jpg">
+
+    </p>
+
+
+</body>
+
+</html>

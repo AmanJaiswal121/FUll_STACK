@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #r {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #j {
+            text-align: justify;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        #c {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body id="jr">
+    <h1>Functional dependency in DBMS</h1> <br>
+    <h3 style="color: blue;">What is Functional Dependency</h3>
+    <p>
+        Functional dependency in DBMS, as the name suggests is a relationship between attributes of a table dependent on
+        each other. Introduced by E. F. Codd, it helps in preventing data redundancy and gets to know about bad designs.
+        <br> <br>
+
+        To understand the concept thoroughly, let us consider P is a relation with attributes A and B. Functional
+        Dependency is represented by -> (arrow sign) <br><br>
+
+        Then the following will represent the functional dependency between attributes with an arrow sign − <br> <br>
+
+        <strong>A -> B</strong> <br> <br>
+        <img src="https://www.tutorialspoint.com/assets/questions/media/9700/functional_dependencies.png"
+            class="fr-fic fr-dib" width="400" height="273">
+    </p> <br>
+
+    <u><strong>Example</strong></u>
+
+    <p>
+        The following is an example that would make it easier to understand functional dependency − <br><br>
+
+        We have a <Department> table with two attributes − DeptId and DeptName. <br><br>
+
+            <strong>DeptId</strong> = Department ID <br>
+            <strong>DeptName</strong> = Department Name <br> <br>
+            The <strong>DeptId</strong> is our primary key. Here, <strong>DeptId</strong> uniquely identifies the
+            <strong>DeptName</strong> attribute. This is because if
+            you want to know the department name, then at first you need to have the <strong>DeptId</strong>. <br><br>
+    </p>
+
+    <table>
+        <tr>
+            <th style="color: blue;">DeptId</th>
+            <th style="color: blue;">DeptName</th>
+        </tr>
+
+        <tr>
+            <td>001</td>
+            <td>Finance</td>
+        </tr>
+
+        <tr>
+            <td>002</td>
+            <td>Marketing</td>
+        </tr>
+
+        <tr>
+            <td>003</td>
+            <td>HR</td>
+        </tr>
+    </table>
+
+    <p>
+        Therefore, the above functional dependency between <strong>DeptId</strong> and <strong>DeptName</strong> can be
+        determined as <strong>DeptId</strong> is
+        functionally dependent on <strong>DeptName</strong> : <br>
+
+        <strong>DeptId -> DeptName</strong>
+    </p> <br>
+
+    <h3 id="c">Types of Functional Dependency</h3>
+    <p>
+        Functional Dependency has three forms −
+    </p>
+
+    <ul>
+        <li>Trivial Functional Dependency.</li><br>
+        <li>Non-Trivial Functional Dependency.</li><br>
+        <li>Completely Non-Trivial Functional Dependency.</li><br>
+    </ul> <br>
+
+
+    <!-- Trivial Functional Dependency -->
+
+    <p style="color: darkolivegreen;">01. <u>Trivial Functional Dependency</u> - </p>
+    <p>
+        It occurs when B is a subset of A in − <br><br>
+
+        <strong>A ->B</strong><br><br>
+        <strong>Example</strong> <br> <br>
+
+        We are considering the same <strong>&lt;Department></Department></strong> table with two attributes to
+        understand the concept of trivial
+        dependency. <br><br>
+
+        The following is a trivial functional dependency since <strong>DeptId</strong> is a subset of DeptId and
+        DeptName <br><br>
+
+        { DeptId, DeptName } -> Dept Id <br>
+    </p> <br><br>
+
+
+    <!-- Non –Trivial Functional Dependency -->
+
+
+    <p style="color: darkolivegreen;">02. <u>Non-Trivial Functional Dependency</u> - </p>
+    <p>
+        It occurs when B is not a subset of A in − <br><br>
+
+        <strong>A ->B</strong> <br><br>
+        <strong>Example</strong><br>
+
+        DeptId -> DeptName <br><br>
+        The above is a non-trivial functional dependency since DeptName is a not a subset of DeptId. <br> <br>
+
+
+    </p>
+
+
+    <!-- Completely Non - Trivial Functional Dependency -->
+
+
+    <p style="color: darkolivegreen;">03. <u>Completely Non-Trivial Functional Dependency</u> - </p>
+    <p>
+        It occurs when A intersection B is null in − <br><br>
+
+        <strong>A ->B</strong><br><br>
+
+    </p>
+
+    <h3 style="color: darkolivegreen;">
+        <u>Armstrong’s Axioms Property of Functional Dependency</u>
+    </h3>
+
+
+    <p>
+
+        Armstrong’s Axioms property was developed by William Armstrong in 1974 to reason about functional dependencies.
+        <br><br>
+
+        The property suggests rules that hold true if the following are satisfied: <br>
+
+    <ul>
+        <li><strong>Transitivity</strong> If A->B and B->C, then A->C i.e. a transitive relation.</li>
+    </ul>
+    <ul>
+        <li><strong>Reflexivity</strong> A-> B, if B is a subset of A.</li>
+    </ul>
+    <ul>
+        <li><strong>Augmentation</strong> The last rule suggests: AC->BC, if A->B.</li>
+    </ul>
+    </p>
+
+
+</body>
+
+</html>

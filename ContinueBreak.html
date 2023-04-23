@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #j {
+            text-align: justify;
+        }
+
+        #ja {
+            width: 300;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: antiquewhite;
+        }
+
+        #o {
+            width: 300;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 20px;
+            background-color: black;
+        }
+
+        #wi {
+            color: aliceblue;
+        }
+    </style>
+</head>
+<h1><u>Continue & Break statement</u></h1>
+<p id="j">
+    The break and Continue statement are jump statement that are used to skip some statements inside the loop or
+    terminate the loop immediatly without checking the test expression. <br> <br>
+    These statements are used inside any loops such as <strong>for, while, do-while</strong>.
+</p>
+<!-- CONTINUE -->
+
+<H3><u>Continue statement in java</u> :</H3>
+<p id="j">
+    It is used to skip the current iteration of a loop. We can use continue statement inside any type of loops such as
+    <strong>for, while, do-while</strong>. <br><br>
+    Basically, if we want to run our loop, but at point (according to condition) we dont want to run only that point
+    then we use this <strong>continue</strong> statement.
+
+    <img alt="The working of continue statement with Java while, do...while, and for loop." height="350"
+        src="//cdn.programiz.com/sites/tutorial2program/files/java-continue.png"
+        title="Working of Java continue statement" width="400">
+</p> <b></b>
+
+<p><u>Continue statement using <strong>for loop</strong></u> - </p>
+
+<p id="ja">
+    class A{ <br>
+    public static void main(String[] args) { <br>
+    for(int i = 0; i &lt;= 5; i++) { <br>
+    if(i == 3) { <br>
+    System.out.println("End Hello only at 3"); <br>
+    <span style="color: brown;">here loop got break</span>
+    continue; <br>
+    } <br>
+    System.out.println("Hello at " + i); <br>
+    } <br>
+    } <br>
+    } <br>
+</p>
+
+<p id="o">
+    <span style="color: aliceblue;">Output - </span> <br>
+    <span style="color: aliceblue;">&nbsp; Hello at 0 </span> <br>
+    <span style="color: aliceblue;">&nbsp; Hello at 1 </span> <br>
+    <span style="color: aliceblue;">&nbsp; Hello at 2 </span> <br>
+    <span style="color: aliceblue;">&nbsp; End Hello only at 3 </span> <br>
+    <span style="color: aliceblue;">&nbsp; Hello at 4 </span> <br>
+    <span style="color: aliceblue;">&nbsp; Hello at 5 </span> <br>
+</p> <br>
+
+<p><u>Continue statement using <strong>while loop</strong></u> - </p>
+
+<p id="ja">
+    class A{ <br>
+    public static void main(String[] args) { <br>
+    int i = 0; <br>
+    while(i == 5) { <br>
+    if(i == 3) { <br>
+    i++; <br>
+    System.out.println("Not print 3"); <br>
+    <span style="color: brown;">here loop got break</span>
+    continue; <br>
+    } <br>
+    System.out.println("Hello at " + i); <br>
+    } <br>
+    } <br>
+    } <br>
+</p>
+
+<p id="o">
+    <span style="color: aliceblue;">Output - </span> <br>
+    <span style="color: aliceblue;">&nbsp; Hello at 0 </span> <br>
+    <span style="color: aliceblue;">&nbsp; Hello at 1 </span> <br>
+    <span style="color: aliceblue;">&nbsp; Hello at 2 </span> <br>
+    <span style="color: aliceblue;">&nbsp; End Hello only at 3 </span> <br>
+    <span style="color: aliceblue;">&nbsp; Hello at 4 </span> <br>
+    <span style="color: aliceblue;">&nbsp; Hello at 5 </span> <br>
+</p> <br> <br>
+
+<!-- BREAK STATEMENT -->
+
+<h3><u>Break statement in java</u> : </h3>
+<p id="j">
+    It is used to terminate the loop immediatly. <br> <br>
+    Basically, break statement are used in situation when we are not sure about the actual number of iteration for the
+    loop or we want to terminate the loop based on condition.
+</p>
+
+<body>
+
+
+</body>
+
+</html>

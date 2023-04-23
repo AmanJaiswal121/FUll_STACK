@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #c {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body id="jr">
+
+    <h1>Stack Data Structure</h1>
+
+    <p>
+        A Stack is a linear data structure that follows the <strong>LIFO (Last-In-First-Out)</strong> principle. Stack
+        has one end,
+        whereas the Queue has two ends (front and rear). It contains only one pointer top pointer pointing to the
+        topmost element of the stack. Whenever an element is added in the stack, it is added on the top of the stack,
+        and the element can be deleted only from the stack. In other words, a <strong>stack can be defined as a
+            container in
+            which insertion and deletion can be done from the one end known as the top of the stack</strong>. <br>
+    </p><br>
+
+    <h3 id="c">Working of Stack</h3>
+    <p>
+        Stack works on the LIFO pattern. As we can observe in the below figure there are five memory blocks in the
+        stack; therefore, the size of the stack is 5. <br><br>
+
+        Suppose we want to store the elements in a stack and let's assume that stack is empty. We have taken the stack
+        of size 5 as shown below in which we are pushing the elements one by one until the stack becomes full. <br>
+    </p><br>
+
+    <img src="https://static.javatpoint.com/ds/images/ds-stack.png" alt="DS Stack Introduction" width="415">
+    <br>
+    <p>
+        Since our stack is full as the size of the stack is 5. In the above cases, we can observe that it goes from the
+        top to the bottom when we were entering the new element in the stack. The stack gets filled up from the bottom
+        to the top. <br><br>
+
+        When we perform the delete operation on the stack, there is only one way for entry and exit as the other end is
+        closed. It follows the LIFO pattern, which means that the value entered first will be removed last. In the above
+        case, the value 5 is entered first, so it will be removed only after the deletion of all the other elements.
+        <br>
+    </p><br>
+
+    <h3 id="c">Standard Stack Operations</h3>
+    <p>
+        <strong>The following are some common operations implemented on the stack :</strong>
+    </p>
+    <p>
+    <ul>
+        <li><u style="color: darkolivegreen;">push()<strong></strong></u> : When we insert an element in a stack then
+            the operation is known as a push. If the stack is full then the overflow condition occurs.</li><br>
+        <li><u style="color: darkolivegreen;">pop()<strong></strong></u> : When we delete an element from the stack, the
+            operation is known as a pop. If the stack is empty means that no element exists in the stack, this state is
+            known as an underflow state.</li><br>
+        <li><u style="color: darkolivegreen;">isEmpty()<strong></strong></u> : It determines whether the stack is empty
+            or not.</li><br>
+        <li><u style="color: darkolivegreen;">isFull()<strong></strong></u> : It determines whether the stack is full or
+            not.</li><br>
+        <li><u style="color: darkolivegreen;">peek()<strong></strong></u> : It returns the element at the given
+            position.</li><br>
+        <li><u style="color: darkolivegreen;">count()<strong></strong></u> : It returns the total number of elements
+            available in a stack.</li><br>
+        <li><u style="color: darkolivegreen;">change()<strong></strong></u> : It changes the element at the given
+            position.</li><br>
+        <li><u style="color: darkolivegreen;">display()<strong></strong></u> : It prints all the elements available in
+            the stack.</li><br>
+    </ul>
+    </p>
+
+</body>
+
+</html>

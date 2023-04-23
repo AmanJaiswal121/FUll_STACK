@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #r {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #j {
+            text-align: justify;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body id="jr">
+    <h1>Types of DBMS (Database Management System)</h1>
+    <p>
+        DBMS is a software that manages the data for efficient storage and fast retrievals of data from database. MySQL,
+        IBM Db2, Oracle, PostgreSQL etc. are all DBMS softwares that manages the data.
+    </p>
+    <h2>Types of DBMS</h2>
+    <h3>There are 4 types of DBMS:</h3>
+    <ul>
+        <li>
+            1. Relational Database Management System (RDBMS)
+        </li>
+        <li>
+            2. Object Oriented Database Management System.
+        </li>
+        <li>
+            3. Hierarchical Database management system.
+        </li>
+        <li>
+            4. Network Database management system.
+        </li>
+    </ul>
+    <h3 style="color:brown ;">1. Relational Database Management System</h3>
+    <p>
+        In RDBMS, data is stored in tables, in form of <strong>rows and columns</strong>, where a row represent the
+        record of the data
+        and column represents the attributes of the record. <br> <br>
+        For example, a student table stores the records of various students, a row of this table represents the record
+        of a single student and the column represents the attributes of the record such as student id, name, age,
+        address etc.
+    </p>
+
+    <strong><u>Student table</u></strong>
+
+    <table>
+        <tr>
+            <th style="color: blue;">ID</th>
+            <th style="color: blue;">Name</th>
+            <th style="color: blue;">Age</th>
+            <th style="color: blue;">Address</th>
+
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Ajeet</td>
+            <td>28</td>
+            <td>Delhi</td>
+        </tr>
+
+        <tr>
+            <td>102</td>
+            <td>Aman</td>
+            <td>21</td>
+            <td>Noida</td>
+        </tr>
+
+        <tr>
+            <td>103</td>
+            <td>Hari</td>
+            <td>32</td>
+            <td>Pune</td>
+        </tr>
+
+        <tr>
+            <td>104</td>
+            <td>Rahul</td>
+            <td>30</td>
+            <td>Agra</td>
+        </tr>
+
+        <tr>
+            <td>105</td>
+            <td>Sonu</td>
+            <td>35</td>
+            <td>Noida</td>
+        </tr> <br>
+        <p>We use SQL to manage, organize and perform various operations on RDBMS.</p>
+
+
+    </table> <br>
+
+    <h3 style="color: brown;">2. Object Oriented Database Management System</h3>
+    <p>
+        Data is stored as objects, attributes and methods. It typically stores and manages objects directly on the
+        database server’s disk. There are no tables, no rows, no columns, no foreign keys. There are only objects.
+        <br><br>
+
+        <strong>Elements of Object Oriented Database :</strong> <br>
+        <strong><u>Object</u> :</strong> It is a combination of data and its behaviour(commonly referred as methods).
+        <br>
+
+        <strong>For example :</strong> A house is an object. An object has two characteristics: states and behaviour.
+        <br> <br>
+
+        In this example of “House” being an object. The state of “House” is its address, color, area etc. and behaviour
+        is Open main door, close main door etc. <br><br>
+
+        An object oriented database can be represented by the following diagram.
+    </p>
+
+    <img decoding="async" class="aligncenter wp-image-12041 "
+        src="https://beginnersbook.com/wp-content/uploads/2022/08/Object-oriented-database-300x186.jpg"
+        alt="Types of DBMS - Object oriented database" width="400" height="297"
+        srcset="https://beginnersbook.com/wp-content/uploads/2022/08/Object-oriented-database-300x186.jpg 300w, https://beginnersbook.com/wp-content/uploads/2022/08/Object-oriented-database-1024x634.jpg 1024w, https://beginnersbook.com/wp-content/uploads/2022/08/Object-oriented-database-768x476.jpg 768w, https://beginnersbook.com/wp-content/uploads/2022/08/Object-oriented-database.jpg 1130w"
+        sizes="(max-width: 479px) 100vw, 479px"> <br> <br>
+
+    <h3 style="color: brown;">3. Hierarchical Database Management System</h3>
+    <p>
+        In hierarchical database management system, data is stored in form of one to many relationships. You can
+        visualize it like a tree where a root node is attached to several descendants nodes called leaves. <br> <br>
+        <strong>Example of Hierarchical database systems are : </strong>IMS by IDM, Windows registry by Microsoft. <br>
+        <br>
+        <strong>For example : </strong>To store the data of an organization, the <strong>root node</strong> is
+        organization itself. The
+        immediate <strong>child nodes</strong> are: Employees, Managers, Directors. These child nodes can have further
+        child nodes such
+        as Employees can have child nodes such as: Engineers, Housekeeping staff, system admin etc.
+
+
+
+    </p>
+    <img decoding="async" loading="lazy" class="aligncenter size-full wp-image-12042"
+        src="https://beginnersbook.com/wp-content/uploads/2022/08/Hierarchical-Database.jpg"
+        alt="Types of DBMS - Hierarchical Database" width="400" height="450"
+        srcset="https://beginnersbook.com/wp-content/uploads/2022/08/Hierarchical-Database.jpg 600w, https://beginnersbook.com/wp-content/uploads/2022/08/Hierarchical-Database-300x225.jpg 300w"
+        sizes="(max-width: 600px) 100vw, 600px">
+
+
+
+    <h3 style="color: brown;">4. Network Database Management System</h3>
+    <p>
+        A network database management system (network DBMS) is based on a network data model, which allows each record
+        to be related to multiple primary records and multiple secondary records. <br> <br>
+
+        A network database is based on a traditional hierarchical database, except it allows each object to have
+        multiple parents instead of a single parent. This means data in network database can have one to one or one to
+        many relationships.
+    </p>
+
+</body>
+
+</html>

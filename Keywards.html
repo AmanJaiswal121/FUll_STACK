@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #br{
+            color: brown;
+        }
+        #wi{
+            color: aliceblue;
+        }
+        #w {
+            text-align: justify;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #j {
+            width: 300;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: antiquewhite;
+        }
+
+        #o {
+            width: 300;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 20px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><u>Keywards</u> - </h1>
+    <p id="w">It is also known as reserve words, which means compile
+        already known their meaning and working.
+    </p>
+    <p>
+        Their are 50 keywards in java :
+    </p>
+    <table style="text-align: center;">
+        <thead>
+            <tr>
+                <th>Serial no.</th>
+                <th>Representation name</th>
+                <th>keywards name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td>1.</td>
+            <td>Control flow</td>
+            <td style="text-align: justify;">if, else, switch, case, break, while, do, for, continue, default.</td>
+        </tbody>
+
+        <tbody>
+            <td>2.</td>
+            <td>Data type</td>
+            <td style="text-align: justify;">byte, short, int, long, double, float, char, boolean.</td>
+        </tbody>
+
+        <tbody>
+            <td>3.</td>
+            <td>Exception handeling</td>
+            <td style="text-align: justify;">try, catch, finally, throw, throws.</td>
+
+        </tbody>
+
+        <tbody>
+            <td>4.</td>
+            <td>java 5</td>
+            <td style="text-align: justify;">enum, assert.</td>
+        </tbody>
+
+        <tbody>
+            <td>5.</td>
+            <td>unused</td>
+            <td style="text-align: justify;">goto, const.</td>
+        </tbody>
+
+        <tbody>
+            <td>6.</td>
+            <td>Object level</td>
+            <td style="text-align: justify;">new, this, super, instenseof.</td>
+        </tbody>
+
+        <tbody>
+            <td>7.</td>
+            <td>Class level</td>
+            <td style="text-align: justify;">class, package, import, interface, extends, implements, abstract.</td>
+        </tbody>
+
+        <tbody>
+            <td>8.</td>
+            <td>Modifiers</td>
+            <td style="text-align: justify;">public, private, protected, final, static, native, syncronized, trainsiest,
+                striclp.</td>
+        </tbody>
+
+        <tbody>
+            <td>9.</td>
+            <td>Method level</td>
+            <td style="text-align: justify;">void, return.</td>
+        </tbody>
+
+    </table><br>
+
+    <p>
+        <u>NOTE</u> : true, false & null these are values not keywards.
+    </p><br>
+
+    <h3><u>Important keywards and their working</u> : </h3>
+
+    <p id="w">
+        <strong>01. </strong> <u><strong>This keyward</strong></u> - This keyward refers to the current object inside a
+        method or containet.
+
+
+
+
+        <img src="https://static.javatpoint.com/images/thisr.jpg" alt="java this keyword">
+
+
+    <ul style="text-align: justify;">
+        <li>Every class contains an unique id and refrence variable can
+            use it and this keyward is also use that unique id.
+        </li>
+    </ul>
+    </p>
+
+    <p id="j">
+        class A { <br>
+        void ml (){ <br>
+        System.out.println(this); <br>
+        } <br>
+        public static void main(String[] args) { <br>
+        A r = new A(); <br>
+        System.out.println(r); <br>
+        r.ml(); <br>
+        } <br>
+        } <br>
+    </p>
+
+    <p id="o">
+        <span style="color: aliceblue;">Output : Aqpr@00</span><br>
+        <span>Output : </span>
+        <span style="color: aliceblue;"> Aqpr@00</span>
+    </p>
+
+    <p id="w">
+    <ul>
+        <li> Whenever the name of instance and local variable both are same then JVM gets confused that which one is
+            instance and which
+            one is local, to avoide this problem we use this keyward.</li>
+    </ul>
+    </p>
+
+    <p id="j">
+        class A { <br>
+        int a; <br>
+        A(int a) { <br>
+        a = a; <span style="color: brown;font-size:20px; text-align: justify;">&#8594; this.a = a; here we have to write
+            like this otherwise it shows error. <span style="color: blue;text-align: justify;">(this.a clerifies that a
+                is part of instance variable).</span> </span> <br>
+
+        } <br>
+        void show(){ <br>
+        System.out.println(a); <br>
+        } <br>
+        public static void main(String[] args) { <br>
+        A r = new A(100); <br>
+        r.show(); <br>
+        } <br>
+        } <br>
+    </p>
+
+    <p id="o">
+        <span style="color: aliceblue;">a = a Output : 0</span> <br>
+        <span style="color: aliceblue;">this.a = a Output : 100</span>
+    </p>
+
+    <ul id="w">
+        <li>
+            When we want to call the default constructr of its own class.
+        </li>
+    </ul>
+
+    <p id="j">
+        class A { <br>
+        A(){ <br>
+        System.out.println("Default constructr"); <br>
+        } <br>
+        A(int a) { <br>
+        this(); <span style="color: brown;font-size:20px; text-align: justify;">&#8594; if we dont write this() here
+            then we have to manually call that default constructr.</span> <br>
+        System.out.println("Parametrize constructr"); <br>
+        } <br>
+        public static void main(String[] args) { <br>
+        A r1 = new A(10); <br>
+        <span style="color: darkblue;">// A r2 = new A();</span> <span
+            style="color: brown;font-size:20px; text-align: justify;">&#8594;If we dont write this() their then we have
+            to create one more object like this otherwise it dosent give the output for default constructr.</span> <br>
+        } <br>
+        } <br>
+    </p>
+
+    <p id="o">
+        <span style="color: aliceblue;">Output : Default constructr</span> <br>
+        <span>Output : </span>
+        <span style="color:  aliceblue;">Parametrize constructr</span> <br>
+    </p><br><br>
+
+    <p id="w"><strong>02. </strong><u><strong>Super keyward</strong></u> - Super keywards refers to the object of
+        super/parent class, it is used When we want to call super class variables, method & constructor through
+        sub/child class object.</p>
+
+
+
+
+    <ul id="w">
+        <li type="circle">Whenever the super class & sub class variable and method name both are same then it can be
+            used only.</li><br>
+        <li type="circle">To avoid the confusion between super class & sub class variable and method that have same name
+            we should use super keyward.</li>
+    </ul>
+
+    <p>
+        It is majorly used in the following contexts: <br>
+    <ul>
+        <li>Use of super with variables</li>
+        <li>Use of super with methods</li>
+        <li>Use of super with constructors</li>
+    </ul><br>
+    </p>
+
+    <p id="w">
+        <strong>Usage of super keyward</strong> - <br><br>
+        1. super can be used to refer immediate parent class instance variable. <br><br>
+        2. super can be used to invoke immediate parent class method. <br><br>
+        3. super() can be used to invoke immediate parent class constructor. <br><br>
+    </p>
+
+    <img src="https://static.javatpoint.com/images/usage-of-java-super.jpg" alt="Usage of Java Super keyword"
+        height="350px" width="400px">
+    <br><br>
+    <p id="w">1. <strong>Use of super with variables</strong>
+    </p>
+    <p id="j">
+        class Vehicle { <br>
+        int maxSpeed = 120; <br>
+        }<br>
+
+        <span style="color: brown;">// sub class Car extending vehicle</span><br>
+        class Car extends Vehicle {<br>
+        int maxSpeed = 180;<br>
+
+        void display()<br>
+        {<br>
+        <span style="color: brown;">// print maxSpeed of base class (vehicle)</span><br>
+        System.out.println("Maximum Speed: " + super.maxSpeed);<br>
+        }<br>
+        }<br>
+
+        <span style="color: brown;">// Driver Program</span><br>
+        class Test {<br>
+        public static void main(String[] args)<br>
+        {<br>
+        Car small = new Car();<br>
+        small.display();<br>
+        }<br>
+        }<br>
+    </p>
+
+    <p id="o">
+        <span style="color: aliceblue;">Output - </span> <br>
+        <span style="color: aliceblue;">Maximum Speed: 120</span> <br>
+    </p>
+    <p id="w">
+        <u>Explaination</u> - <br><br>
+        In the above example, both base class and subclass have a member maxSpeed. We could access maxSpeed of base
+        class in subclass using super keyword.
+    </p><br><br>
+
+    <p>
+        2. <strong>Use of super with methods</strong> - <br>
+    </p>
+
+    <p id="j">
+        class Person { <br>
+        void message() <br>
+        { <br>
+        System.out.println("This is person class\n");<br>
+        }<br>
+        }<br>
+        <span style="color: brown;">// Subclass Student</span> <br>
+        class Student extends Person {<br>
+        void message()<br>
+        {<br>
+        System.out.println("This is student class");<br>
+        }<br>
+        <span style="color: brown;">// Note that display() is only in Student class</span><br>
+
+        void display()<br>
+        {<br>
+        <span style="color: brown;">// will invoke or call current class message() method</span><br>
+        message();<br>
+
+        <span style="color: brown;">// will invoke or call parent class message() method</span> <br>
+
+        super.message();<br>
+        }<br>
+        }<br>
+        <span style="color: brown;">// Driver Program</span><br>
+        class Test {<br>
+        public static void main(String args[])<br>
+        {<br>
+        Student s = new Student();<br>
+
+        <span style="color: brown;">// calling display() of Student</span><br>
+        s.display();<br>
+        }<br>
+        }<br>
+    </p>
+
+    <p id="o">
+        <span style="color: aliceblue;">Output - </span> <br>
+        <span style="color: aliceblue;">This is student class </span> <br>
+        <span style="color: aliceblue;">This is person class </span>
+    </p><br><br>
+
+    <p>
+        3. <strong>Use of super with constructors</strong> -
+    </p>
+    <p id="j">
+        class Person { <br>
+        Person()<br>
+        {<br>
+        System.out.println("Person class Constructor");<br>
+        }<br>
+        }<br>
+
+        <span id="br">// subclass Student extending the Person class</span><br>
+        class Student extends Person {<br>
+        Student()<br>
+        {<br>
+        <span id="br">// invoke or call parent class constructor</span><br>
+        super();<br>
+
+        System.out.println("Student class Constructor");<br>
+        }<br>
+        }<br>
+
+        <span id="br">// Driver Program</span><br>
+        class Test {<br>
+        public static void main(String[] args)<br>
+        {<br>
+        Student s = new Student();<br>
+        }<br>
+        }<br>
+    </p>
+
+    <p id="o">
+        <span id="wi">Output - </span> <br>
+        <span id="wi">Person class Constructor</span><br>
+        <span id="wi">Student class Constructor</span><br>
+    </p>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #p1 {
+            width: 300;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: antiquewhite;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1><u>Methods in java</u></h1>
+    <p>
+        It is a sub block of a class that is used for implemeting logic of an objects operations. <br>
+    <ul>
+        <u>NOTE</u> : logic must be placed only inside a method, not directly at class level.
+        If we place logic at class level compiler throws error.
+    </ul>
+    </p>
+
+    <img src="https://static.javatpoint.com/core/images/method-in-java.png" alt="Method in Java" width="415"><br>
+
+    <!-- With Initlization -->
+    <br>
+    <p>
+        01. <u>With Initlization</u> - <br> <br>
+    </p>
+
+    <p id="p1">
+        class Main{ <br>
+        int a,b; <br>
+        int sum; <br>
+        <span style="color: brown;">// here we can initlize the variable.</span> <br>
+        public int add (int a, int b){ <br>   
+        sum = a + b; <br>
+        <span style="color: brown;">// return type of method.</span> <br>
+        return sum; <br>
+        } <br>
+        public static void main(String[] args) { <br>
+            Main r = new Main(); <br>
+            <span style="color: brown;">// here we give value tp our initlize variable.</span> <br>
+            System.out.println(r.add(10,4)); <br>
+        } <br>
+        } <br>
+    </p>
+
+    <p style="width: 300;border: 1px solid black;padding: 10px;margin: 20px;background-color: black;">
+        <span style="color: aliceblue;">output : 14</span>
+    </p>
+
+    <p>
+        <u>Explaination</u> - 
+        <ul>
+            In this programm our global variables are not initalize at compile time.
+            We give then values after creating object.
+        </ul>
+    </p><br>
+
+    <!-- WITHOUT INITLIZATION -->
+
+    <P><br>
+        02. <U>Without Initlization</U> - 
+    </P>
+
+    <p id="p1">
+        class Mian{ <br>
+            int a = 10; <br>
+            int b = 20; <br>
+            int sum; <br>
+            public int add(){ <br>
+                sum = a + b; <br>
+                return sum; <br>
+            } <br>
+            public static void main(String[] args) { <br>
+                Main r = new Main(); <br>
+                System.out.println(r.add()); <br>
+            } <br>
+
+        } <br>
+
+    </p>
+
+    <p style="width: 300;border: 1px solid black;padding: 10px;margin: 20px;background-color: black;">
+        <span style="color: aliceblue;">output : 12</span>
+    </p>
+
+    <p>
+        <u>Explaination</u> - <br>
+        <ul>
+            In this programm our global variables are initalize at compile time.
+        </ul>
+
+    </p><br>
+
+    <!-- WITHOUT RETURN TYPE WITH PARAMETER -->
+
+    <p>
+        03. <U>Without return type with parameter</U> - 
+    </p>
+
+    <p id="p1">
+        class A{ <br>
+            int add; <br>
+            public void m1(int a, int b){<br>
+                add=a+b;<br>
+                System.out.println(add);<br>
+            }<br>
+            public static void main(String[] args) {<br>
+                A r=new A();<br>
+                r.m1(10,20);<br>
+            }<br>
+        }<br>
+    </p>
+
+    <p style="width: 300;border: 1px solid black;padding: 10px;margin: 20px;background-color: black;">
+        <span style="color: aliceblue;">output : 30</span>
+    </p>
+
+    <p>
+        <u>Explaination</u> - <br>
+        <ul>
+            In this programm, we dosent give any return type insted of
+            that we write <strong>void </strong>(void is use to show null value).
+        </ul>
+    </p><br>
+
+    <!-- With return type without parameter -->
+
+    <p>
+        04. <u>With return type without parameter</u> - <br>
+    </p>
+
+    <p id="p1">
+        class Main{ <br>
+            int x = 22; <br>
+            int y = 3; <br>
+            public void ml(){ <br>
+                int z = x + y; <br>
+                System.out.println(z); <br>
+            }
+            public static void main(String[] args) { <br>
+                Main r = new Main(); <br>
+                r.ml(); <br>
+            }<br>
+
+        } <br>
+    </p>
+
+    <p style="width: 300;border: 1px solid black;padding: 10px;margin: 20px;background-color: black;">
+        <span style="color: aliceblue;">output : 25</span>
+    </p>
+
+    <p>
+        <u>Explaination</u> - <br>
+        <ul>
+            In this programm, we dosent give any return type insted of
+            that we write <strong>void </strong> and we dosent give any parameter.
+        </ul>
+    </p><br>
+
+    <!-- With return type without parameter  -->
+
+    <p>
+        05. <u>With return type without parameter</u> - <br>
+    </p>
+
+    <p id="p1">
+        class Main{ <br>
+            int x = 25; <br>
+            int y = 25; <br>
+            public int ml(){ <br>
+                ml = x + y; <br>
+                return ml; <br>
+            }
+            public static void main(String[] args) { <br>
+                Main r = new Main(); <br>
+                System.out.ptintln(r.ml()); <br>
+            }<br>
+
+        } <br>
+    </p>
+
+    <p style="width: 300;border: 1px solid black;padding: 10px;margin: 20px;background-color: black;">
+        <span style="color: aliceblue;">output : 50</span>
+    </p>
+
+    <p>
+        <u>Explaination</u> - <br>
+        <ul>
+            In this programm, we give an <strong>return</strong> type and values 
+            are given already.
+        </ul>
+    </p><br>
+
+    <!-- Static method -->
+
+    <p>06. <u>Static method</u></p>
+
+    <p id="p1">
+        class Main{ <br>
+            static int a = 20; <br>
+            static int b = 10; <br>
+            public static int m1(){ <br>
+                m1 = a + b; <br>
+            } <br>
+            public static void main(String[] args) { <br>
+                Main r = new Main(); <br>
+                System.out.ptintln(r.ml()); <br>
+            }<br>
+        } <br>
+    </p>
+
+    <p style="width: 300;border: 1px solid black;padding: 10px;margin: 20px;background-color: black;">
+        <span style="color: aliceblue;">output : 30</span>
+    </p>
+
+    <p>
+        <u>Explaination</u> - <br>
+        <ul>
+           Static keyward give the value at the time of Initlization.
+        </ul>
+    </p><br>
+
+
+    <img src="https://static.javatpoint.com/images/constructor-vs-method-in-java.jpg" alt="Java Constructors vs. Methods" width="415">
+    
+
+
+</body>
+
+</html>

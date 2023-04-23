@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #c {
+            color: brown;
+        }
+
+        /* table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 160px;
+            width: 400px;
+        } */
+    </style>
+</head>
+
+<body id="jr">
+    <h1>Introduction to Linked List in Data Structures</h1>
+
+    Linked lists are the new data structure we'll explore today. The study of linked lists will certainly be detailed,
+    but first, I would like to inform you about one of the fundamental differences between linked lists and arrays.
+    <br><br>
+
+    Arrays demand a contiguous memory location. Lengthening an array is not possible. We would have to copy the whole
+    array to some bigger memory location to lengthen its size. Similarity inserting or deleting an element causes the
+    elements to shift right and left, respectively.<br><br>
+
+    But linked lists are stored in a non-contiguous memory location. To add a new element, we just have to create a node
+    somewhere in the memory and get it pointed by the previous element. And deleting an element is just as easy as that.
+    We just have to skip pointing to that particular node. Lengthening a linked list is not a big deal.<br><br>
+    <br>
+    <h3 id="c">Why Linked Lists?</h3>
+    <p>
+        Memory and the capacity of an array remain fixed, while in linked lists, we can keep adding and removing
+        elements without any capacity constraint. <br><br>
+    </p>
+
+    <h3 id="c">Types of Linked List</h3>
+    <p>Following are the various types of linked list.</p>
+    <br>
+    <h3 style="color: darkolivegreen;">1. Singly Linked Lists</h3>
+
+    <p>
+        Singly linked lists contain two “buckets” in one node; one bucket holds the data and the other bucket holds the
+        address of the next node of the list. Traversals can be done in one direction only as there is only a single
+        link between two nodes of the same list. <br><br>
+
+        <img src="https://www.tutorialspoint.com/data_structures_algorithms/images/singly_linked_lists.jpg"
+            width="415px">
+    </p>
+
+    <h3 style="color: darkolivegreen;">2. Doubly Linked Lists</h3>
+
+    <p>
+        Doubly Linked Lists contain three “buckets” in one node; one bucket holds the data and the other buckets hold
+        the addresses of the previous and next nodes in the list. The list is traversed twice as the nodes in the list
+        are connected to each other from both sides. <br><br>
+
+        <img src="https://www.tutorialspoint.com/data_structures_algorithms/images/doubly_linked_lists.jpg"
+            width="415px">
+    </p>
+
+    <h3 style="color: darkolivegreen;">3. Circular Linked Lists</h3>
+
+    <p>
+        Circular linked lists can exist in both singly linked list and doubly linked list. <br><br>
+
+        Since the last node and the first node of the circular linked list are connected, the traversal in this linked
+        list will go on forever until it is broken. <br><br>
+
+        <img src="https://www.tutorialspoint.com/data_structures_algorithms/images/circular_linked_lists.jpg"
+            width="415px">
+    </p><br>
+
+    <h3 id="c">Basic Operations in the Linked Lists</h3>
+    <p>
+        The basic operations in the linked lists are insertion, deletion, searching, display, and deleting an element at
+        a given key. These operations are performed on Singly Linked Lists as given below − <br>
+    </p>
+    <p>
+        <ul>
+            <li><strong><u>Insertion</u> : </strong>Adds an element at the beginning of the list.</li><br>
+            <li><strong><u>Deletion</u> : </strong>Deletes an element at the beginning of the list.</li><br>
+            <li><strong><u>Display</u> : </strong>Displays the complete list.</li><br>
+            <li><strong><u>Search</u> : </strong>Searches an element using the given key.</li><br>
+            <li><strong><u>Delete</u> : </strong>Deletes an element using the given key.</li><br>
+        </ul>
+    </p><br>
+
+    <h3 id="c">Implementation of Linked Lists</h3>
+    <p>Let us look at the implementation of the linked list data structures below −</p>
+    <p>
+        <ul>
+            <li>Linked Lists can be used to implement useful data structures like stacks and queues.</li><br>
+            <li>Linked Lists can be used to implement hash tables, each bucket of the hash table can be a linked list.</li><br>
+            <li>Linked Lists can be used to implement graphs (Adjacency List representation of graph).</li><br>
+            <li>Linked Lists can be used in a refined way in implementing different file systems in one form or another.</li><br>
+        </ul>
+    </p>
+
+
+</body>
+
+</html>

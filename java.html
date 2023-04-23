@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #w {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>What is java :</h2>
+    <p id="w">
+        Java is a high level language, multithereaded, platform independent language which follow the concept of
+        <strong>object oriented programming</strong>. Java was develoved by <strong>James Gosling</strong>
+        in the year 1990 in <strong>Sun Microsystem</strong>.
+    </p>
+    <h3><u>Terms/components used in programming language</u></h3>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;text-align: justify;">
+        01. <u>Source code</u> - developer written program, it is written according to programming language syntax.<br>
+        02. <u>Compiler code</u> - compiler generated program that is converted from source cod.<br>
+        03. <u>Compiler</u> - it is an translation of program that converts source code into machine language at
+        once.<br>
+        04. <u>Interpreter</u> - it is also translate program that converts source code into machine language by line by
+        line.<br>
+        05. <u>Extenaible code</u> - operating system understandable readly executed program <strong>.exe</strong>
+        file.<br>
+        06. <u>Compilation</u> - it is a process of translating source code into compiler code.<br>
+        07. <u>Execution</u> - it is process of running compiled code to get output.<br>
+    </p>
+
+    <!-- JVM, JDK & JRE -->
+
+    <h1 style="text-align: center; color: blueviolet;"><u>JVM, JDK & JRE</u> </h1>
+
+    <p id="w"><strong><u>JVM</u></strong> (java vertual machine) - it is the software
+        in the form of interprater written in c language , through which we can execute our java program.<br>
+    <ul>
+        <li type="circle">JVM is resonsible for converting byte code into machine specific code.</li>
+    </ul>
+    </p>
+
+    <p id="w">
+        <strong><u>JRE</u></strong> (java runtime envoirment) - it provides an envoirment to execute the java
+        programm. It internally contains JVM which is responsibe to execute a java programm.
+    </p>
+
+    <p id="w">
+        <strong><u>JDK</u></strong> (java development kit) - it internally contains JVM & JRE where JVM provides
+        all tools to work with java language.
+    <ul>
+        <li type="circle">JDK contains both compiler and interprater.</li>
+    </ul>
+    </p>
+
+    <h3><u>Flow chart of java programm :</u></h3>
+    <p style="text-align: center;">Java programm (.java)</p>
+    <p style="text-align: center;"><span style='font-size:15px;'>&#8595; </span></p>
+    <p style="text-align: center;">Compiler</p>
+    <p style="text-align: center;"><span style='font-size:15px;'>&#8595; </span></p>
+    <p style="text-align: center;">Byte code (.class)</p>
+    <p style="text-align: center;"><span style='font-size:15px;'>&#8595; </span></p>
+    <p style="text-align: center;">OS like windows, Mac, Linux etc</p>
+    <u>NOTE</u> - jvm is platform dependent where java is platform independent.
+
+    <!-- MODIFIERS IN JAVA -->
+
+    <h2><u>Access Modifiers in java</u></h2>
+    <p id="w">
+        In java Access Modifiers is of 4 types - <br><br>
+
+        <!-- PUBLIC -->
+
+        01. <u>Public</u> -
+    <ul>The public keyword is an access modifier, meaning that it is used to set the
+        access level for classes, attributes, methods and constructors.</ul>
+    <p style="width: 300;border: 1px solid black;padding: 20px;margin: 20px;background-color: antiquewhite;">
+
+        <span style="color: brown;">// save A.java</span><br>
+
+        package pack;<br>
+        public class A{<br>
+        public void msg(){System.out.println("Hello");}<br>
+        }<br>
+    </p>
+    <p style="width: 300;border: 1px solid black;padding: 30px;margin: 20px;background-color: antiquewhite;">
+        <span style="color: brown;">// save B.java</span><br>
+        package mypack;<br>
+        import pack.*;<br>
+
+        class B{<br>
+        public static void main(String args[]){<br>
+        A obj = new A();<br>
+        obj.msg();<br>
+        }<br>
+        }<br>
+    </p>
+    </p>
+
+    <!-- PRIVATE -->
+
+    <p id="w">
+        02. <u>Private</u> - <br>
+    <ul>
+        The class members which have private keyward in its creation statement, can be only accessed in the
+        same class outside of the class it leads runtime exception.
+    </ul>
+
+    </p>
+    <p style="width: 300;border: 1px solid black;padding: 30px;margin: 20px;background-color: antiquewhite;">
+        <span><u>eg.</u></span><br><br>
+        public class A{ <br>
+        private int z=10; <br>
+        public static void main(String[] args){ <br>
+        A r1=new A(); <br>
+        System.out.println(r1.z); <br>
+        } <br>
+        } <br>
+    </p>
+
+    <p style="width: 300;border: 1px solid black;padding: 10px;margin: 20px;background-color: black;">
+        <span style="color: aliceblue;">Output : 10</span>
+    </p>
+
+    <p style="width: 300;border: 1px solid black;padding: 30px;margin: 20px;background-color: antiquewhite;">
+        public class B extends A{ <br>
+        public static void main(String[] args){ <br>
+        A r2=new A(); <br>
+        } <br>
+        } <br>
+    </p>
+
+    <p style="width: 300;border: 1px solid black;padding: 10px;margin: 20px;background-color: black;">
+        <span style="color: aliceblue;">Output : Runtime Error</span>
+    </p>
+
+    <!-- PROTECTED -->
+
+    <p id="w">
+        03. <u>Protected</u> -
+    <ul>
+        A class members which is having protected keyward in its creation statement can be accessiable outside
+        the all class within the same package but outside the package in sub class that to only by using
+        sub class object.
+    </ul>
+    <ul>
+        <ul>
+            <li type="circle">
+                This rule is only applicabe for non-static protected members, static protected members
+                can be accessiable by using same class name or by using sub class name.
+            </li>
+        </ul>
+    </ul>
+    </p>
+
+    <!-- 04. DEFAULT -->
+
+    <p id="w">
+        04. <u>Default</u> -
+    <ul>
+        Whenever we are not declearing our variable with public, private or protected then bydefault accessiblity
+        modifier will be default. <br>
+        eg. - default int a;
+    </ul>
+    <ul>
+        <ul>
+            <li type="circle">
+                If accessiblity modifier is default then members will be not accessiable outside the package.
+            </li>
+        </ul>
+    </ul>
+    </p>
+
+
+    <h2><u>Variables</u></h2>
+    <p style="text-align: justify;">
+        <img src="https://static.javatpoint.com/core/images/types-of-variables1.png" alt="types of variables in java"
+            height="300px" width="450px" style="float:right;">
+        A variable is a container which holds the value while the Java program is executed. A variable is assigned with
+        a data type. <br>
+        A variable is the name of a reserved area allocated in memory. In other words, it is a name of the memory
+        location. It is a combination of "vary + able" which means its value can be changed. <br> <br>
+        In java variables is of three types : <br><br>
+        1. <u>Local variable</u> - <br>
+    <ul>
+        A variable declared inside the body of the method is called local variable. You can use this variable only
+        within that method and the other methods in the class aren't even aware that the variable exists.
+
+        A local variable cannot be defined with "static" keyword.
+    </ul>
+    2. <u>Instance/global Variable</u> - <br>
+    <ul>
+        A variable declared inside the class but outside the body of the method, is called an instance variable. It is
+        not
+        declared as static.
+
+        It is called an instance variable because its value is instance-specific and is not shared among instances. <br>
+    </ul>
+    3. <u>Static variable</u> - <br>
+    <ul>
+        A variable that is declared as static is called a static variable. It cannot be local. You can create a single
+        copy
+        of the static variable and share it among all the instances of the class. Memory allocation for static variables
+        happens only once when the class is loaded in the memory.
+    </ul>
+    </p>
+
+
+    <p>
+    <ul>
+        <li type="#8595">
+            <a style="color: green;" href="Methodes.html" target="_main">Methods in java</a>
+        </li>
+    </ul>
+    </p>
+
+    <p>
+    <ul>
+        <li type="#8595">
+            <a style="color: green;" href="Identifiers.html" target="_main">Identifiers in java</a>
+        </li>
+    </ul>
+    </p>
+
+    <p>
+    <ul>
+        <li type="#8595">
+            <a style="color: green;" href="Keywards.html" target="_main">Keywards in java</a>
+        </li>
+    </ul>
+    </p>
+
+    <p>
+    <ul>
+        <li type="#8595">
+            <a style="color: green;" href="Loops.html" target="_main">Loops in java</a>
+        </li>
+    </ul>
+    </p>
+
+    <p>
+        <ul>
+            <li type="#8595">
+                <a style="color: green;" href="ContinueBreak.html" target="_main">Continue & Break in java</a>
+            </li>
+        </ul>
+        </p>
+    
+
+
+
+
+
+
+</body>
+
+</html>

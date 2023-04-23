@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #r {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #j {
+            text-align: justify;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body id="jr">
+    <h1>DBMS Architecture</h1>
+    <p>
+        A Database Management system is not always directly available for users and applications to access and store
+        data in it. A Database Management system can be <strong>centralised</strong>(all the data stored at one
+        location),
+        <strong>decentralised</strong>(multiple copies of database at different locations) or
+        <strong>hierarchical</strong>, depending upon its
+        architecture.
+    </p>
+
+    <strong><u>Database Architecture is logically of two types</u> : </strong>
+    <ul>
+        1-tier architecture. <br>
+        2-tier architecture. <br>
+        3-tier architecture <br>
+    </ul>
+
+    <p>
+        <u style="color: brown;">1-tier architecture</u> : 1-tier DBMS architecture also exist, this is when the
+        database is directly
+        available to the user for using it to store data. Generally such a setup is used for local application
+        development, where programmers communicate directly with the database for quick response.
+    </p> <br>
+
+    <p>
+
+        <u style="color: brown;">2-tier DBMS Architecture</u> : 2-tier DBMS architecture includes an Application layer
+        between the user and <span><img style="float:right;" class="blur-up ezlazyloaded"
+                src="https://www.studytonight.com/ezoimgfmt/static.studytonight.com/dbms/images/2-tier-dbms.png?ezimgfmt=ng:webp/ngcb3"
+                alt="2-tier dbms architecture" ezimgfmt="ng ngcb3 src"
+                data-ezsrc="https://www.studytonight.com/ezoimgfmt/static.studytonight.com/dbms/images/2-tier-dbms.png?ezimgfmt=ng:webp/ngcb3"
+                ezoid="0.8764162113499703" width="100" height="200"> <br></span>
+        the DBMS, which is responsible to communicate the user's request to the database management system and then send
+        the response from the DBMS to the user. <br> <br>
+
+        An application interface known as ODBC(Open Database Connectivity) provides an API that allow client side
+        program to call the DBMS. Most DBMS vendors provide ODBC drivers for their DBMS. <br> <br>
+        Such an architecture provides the DBMS extra security as it is not exposed to the End User directly. Also,
+        security can be improved by adding security and authentication checks in the Application layer too. <br> <br>
+    </p>
+
+    <p>
+        <u style="color: brown;">3-tier DBMS Architecture</u>
+        3-tier DBMS architecture is the most commonly used architecture for web applications. <br>
+        <span><img class="blur-up ezlazyloaded"
+                src="https://www.studytonight.com/ezoimgfmt/static.studytonight.com/dbms/images/3-tier-dbms.png?ezimgfmt=ng:webp/ngcb3"
+                alt="3-tier dbms architecture" ezimgfmt="ng ngcb3 src"
+                data-ezsrc="https://www.studytonight.com/ezoimgfmt/static.studytonight.com/dbms/images/3-tier-dbms.png?ezimgfmt=ng:webp/ngcb3"
+                ezoid="0.13145797876760112" style="float: right;"></span> <br>
+        It is an extension of the 2-tier architecture. In the 2-tier architecture, we have an application layer which
+        can be accessed programatically to perform various operations on the DBMS. The application generally understands
+        the Database Access Language and processes end users requests to the DBMS. <br> <br>
+
+        In 3-tier architecture, an additional Presentation or GUI Layer is added, which provides a graphical user
+        interface for the End user to interact with the DBMS. <br><br>
+
+        For the end user, the GUI layer is the Database System, and the end user has no idea about the application layer
+        and the DBMS system. <br> <br>
+
+        If you have used MySQL, then you must have seen PHPMyAdmin, it is the best example of a 3-tier DBMS
+        architecture. <br>
+
+    </p>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #r {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #jr {
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #j {
+            text-align: justify;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body id="jr">
+    <h1>Advantages and Disadvantages of DBMS: DBMS vs file System</h1>
+    <p>
+        In this guide, you will learn <strong>advantages and disadvantages of DBMS</strong>. We will first discuss what
+        is a file
+        processing system and how Database management systems are better than file processing systems.
+    </p> <br>
+    <h3 style="color: brown;">Drawbacks of File system</h3>
+    <p>
+    <ul>
+        <li>
+            <strong><u>Data redundancy</u> :</strong> Data redundancy refers to the duplication of data, lets say we are
+            managing the data of a
+            college where a student is enrolled for two courses, the same student details in such case will be stored
+            twice, which will take more storage than needed. Data redundancy often leads to higher storage costs and
+            poor access time. <br> <br>
+        </li>
+        <li>
+            <strong><u>Data inconsistency</u> :</strong> Data redundancy leads to data inconsistency, lets take the same
+            example that we have
+            taken above, a student is enrolled for two courses and we have student address stored twice, now lets say
+            student requests to change his address, if the address is changed at one place and not on all the records
+            then this can lead to data inconsistency. <br><br>
+        </li>
+        <li>
+            <strong><u>Data Isolation</u> :</strong> Because data are scattered in various files, and files may be in
+            different formats, writing
+            new application programs to retrieve the appropriate data is difficult. <br><br>
+        </li>
+        <li>
+            <strong><u>Dependency on application programs</u> :</strong> Changing files would lead to change in
+            application programs. <br><br>
+        </li>
+        <li>
+            <strong><u>Atomicity issues</u> :</strong> Atomicity of a transaction refers to “All or nothing”, which
+            means either all the
+            operations in a transaction executes or none.
+            For example: Let’s say Steve transfers 100$ to Negan’s account. This transaction consists multiple
+            operations such as debit 100$ from Steve’s account, credit 100$ to Negan’s account. Like any other device, a
+            computer system can fail lets say it fails after first operation then in that case Steve’s account would
+            have been debited by 100$ but the amount was not credited to Negan’s account, in such case the rollback of
+            operation should occur to maintain the atomicity of transaction. It is <strong>difficult to achieve
+                atomicity in
+                file processing systems</strong>. <br><br>
+        </li>
+        <li>
+            <strong><u>Data Security</u> :</strong> Data should be secured from unauthorised access, for example a
+            student in a college should
+            not be able to see the payroll details of the teachers, such kind of security constraints are difficult to
+            apply in file processing systems.
+        </li>
+    </ul>
+
+    </p>
+
+    <h2 style="color: brown;">Advantage of DBMS over file system</h2>
+    <p>
+        There are several advantages of Database management system over file system. Few of them are as follows:
+    </p>
+    <p>
+    <ul>
+        <li>
+            <strong><u>No redundant data</u> :</strong> Redundancy removed by data normalization. No data duplication saves storage and improves
+            access time. <br> <br>
+        </li>
+        <li>
+            <strong><u>Data Consistency and Integrity</u> :</strong> As we discussed earlier the root cause of data inconsistency is data
+            redundancy, since data normalization takes care of the data redundancy, data inconsistency also been taken
+            care of as part of it. <br> <br>
+        </li>
+        <li>
+            <strong><u>Data Security</u> :</strong> It is easier to apply access constraints in database systems so that only authorized user is
+            able to access the data. Each user has a different set of access thus data is secured from the issues such
+            as identity theft, data leaks and misuse of data. <br> <br>
+
+        </li>
+        <li>
+            <strong><u>Privacy</u> :</strong> Limited access means privacy of data. DBMS can grant and revoke access to the database on user
+            level that ensures who is accessing which data. It also helps user to manage the constraints on database,
+            this ensures which type of data can be entered into the table. <br> <br>
+
+        </li>
+        <li>
+            <strong><u>Easy access to data</u> :</strong> Database systems manages data in such a way so that the data is easily accessible with
+            fast response times. Even if the database size is huge, the DBMS can still provide faster access and
+            updation of data. <br> <br>
+        </li>
+        <li>
+            <strong><u>Easy recovery</u> :</strong> Since database systems keeps the backup of data, it is easier to do a full recovery of data
+            in case of a failure. This is very useful especially for almost all the organizations, as the data
+            maintained over time should not be lost during a system crash or failure. <br> <br>
+        </li>
+    </ul>
+    </p>
+
+    <h3 style="color: brown;">Disadvantages of DBMS</h3>
+    <p>
+        <ul>
+            <li>
+                DBMS implementation cost is high compared to the file system. <br><br>
+            </li>
+            <li>
+                Complexity: Database systems are complex to understand. <br><br>
+            </li>
+            <li>
+                Performance: Database systems are generic, making them suitable for various applications. However this feature affect their performance for some applications. <br> <br>
+            </li>
+        </ul>
+    </p>
+</body>
+
+</html>
